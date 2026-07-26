@@ -239,7 +239,7 @@ int TWinstall_Run_OTA_BAK (bool reportback)
 {
 int result = 0;
 #ifdef FOX_VANILLA_BUILD
-   LOGINFO("- OrangeFox: DEBUG: skipping the OTA_BAK process...\n");
+   LOGINFO("- KaliFox: DEBUG: skipping the OTA_BAK process...\n");
    return result;
 #endif
       if ((DataManager::GetIntValue(FOX_MIUI_ZIP_TMP) != 0) || (DataManager::GetIntValue(FOX_METADATA_PRE_BUILD) != 0))
@@ -657,7 +657,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
       DataManager::SetValue(FOX_INCREMENTAL_OTA_FAIL, 0);
       DataManager::SetValue(FOX_LOADED_FINGERPRINT, 0);
 
-      gui_msg("fox_install_detecting=Detecting Current Package");
+      gui_msg("Kalifox_install_detecting=Detecting Current Package");
       
       if (zip_EntryExists(Zip, UPDATER_SCRIPT))
 	{
@@ -692,7 +692,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
               {
                 zip_is_survival_trigger = true;
                 support_all_block_ota = true;
-                LOGINFO("OrangeFox: Detected miui_update file [%s]\n", FOX_MIUI_UPDATE_PATH);
+                LOGINFO("KaliFox: Detected miui_update file [%s]\n", FOX_MIUI_UPDATE_PATH);
               }
             else
             if (zip_EntryExists(Zip, FOX_MIUI_UPDATE_PATH_EU) // META-INF/com/xiaomieu/xiaomieu.sh - if found, then this is a xiaomi.eu zip installer
@@ -701,7 +701,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
 		zip_is_survival_trigger = true;
                 if (zip_EntryExists(Zip, FOX_MIUI_UPDATE_PATH_EU)) {
 			support_all_block_ota = true;
-			LOGINFO("OrangeFox: Detected xiaomi.eu file [%s]\n", FOX_MIUI_UPDATE_PATH_EU);
+			LOGINFO("KaliFox: Detected xiaomi.eu file [%s]\n", FOX_MIUI_UPDATE_PATH_EU);
 		} else {
 			// this is some other non-standard ROM installer - do nothing
 		}
@@ -711,24 +711,24 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
               mCheck = TWFunc::Exec_With_Output(check_command);  // check for miui in update-binary             
               if (mCheck.size() > 0)
                 { 
-                  LOGINFO("OrangeFox: the answer that I received is: [%s]\n",mCheck.c_str());
+                  LOGINFO("Kalifox: the answer that I received is: [%s]\n",mCheck.c_str());
                   int not_found = mCheck.find("not found");
                   if (not_found == -1) // then we are miui
                     {    
-                       LOGINFO("OrangeFox: Detected new Xiaomi update-binary [Message=%s]\n", mCheck.c_str());
+                       LOGINFO("KaliFox: Detected new Xiaomi update-binary [Message=%s]\n", mCheck.c_str());
                        is_new_miui_update_binary = 1;
                        zip_is_survival_trigger = true;
                        support_all_block_ota = true;
                     }
                    else 
                      {
-                        LOGINFO("OrangeFox: Received a response from [%s], but did not detect a new Xiaomi update-binary -Message=[%s] and code=[%i]\n", 
+                        LOGINFO("KaliFox: Received a response from [%s], but did not detect a new Xiaomi update-binary -Message=[%s] and code=[%i]\n", 
                     	    check_command.c_str(), mCheck.c_str(), not_found);
                      }
                 } // mCheck.size > 0
               else
                 {
-                   LOGINFO("OrangeFox: The output of [%s] came out empty\n", check_command.c_str());
+                   LOGINFO("KaliFox: The output of [%s] came out empty\n", check_command.c_str());
                 }  
              }
        }
@@ -776,7 +776,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
                  DataManager::SetValue(FOX_ZIP_INSTALLER_CODE, 22); // miui Treble ROM
            
            Fox_Zip_Installer_Code = DataManager::GetIntValue(FOX_ZIP_INSTALLER_CODE);
-           LOGINFO("OrangeFox: detected Treble ROM installer. [code=%i] \n", Fox_Zip_Installer_Code);
+           LOGINFO("KaliFox: detected Treble ROM installer. [code=%i] \n", Fox_Zip_Installer_Code);
         }
         else 
         if (TWFunc::Has_Vendor_Partition())
@@ -792,7 +792,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
                  DataManager::SetValue(FOX_ZIP_INSTALLER_CODE, 22);
            
            Fox_Zip_Installer_Code = DataManager::GetIntValue(FOX_ZIP_INSTALLER_CODE);
-           LOGINFO("OrangeFox: detected standard ROM installer, on a real Treble device!\n");       
+           LOGINFO("KaliFox: detected standard ROM installer, on a real Treble device!\n");       
          }
     
     	if (Fox_OTA_Backup_Stock_Boot_Image())
@@ -841,7 +841,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
 		  if (metadata_fingerprint.size() > FOX_MIN_EXPECTED_FP_SIZE) 
 		    {
 		      gui_msg(Msg
-			      ("fox_incremental_package_detected=Detected Incremental package '{1}'")
+			      ("kalifox_incremental_package_detected=Detected Incremental package '{1}'")
 			      (path));
 			      
 		      if (DataManager::GetIntValue(FOX_INCREMENTAL_PACKAGE) == 0)
@@ -888,7 +888,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
 			          metadata_fingerprint,
 				  metadata_device))
 			    {
-			      gui_msg("fox_incremental_ota_compatibility_true=Incremental package is compatible.");
+			      gui_msg("Kalifox_incremental_ota_compatibility_true=Incremental package is compatible.");
 			      property_set(fingerprint_property.c_str(), metadata_fingerprint.c_str());
 			      DataManager::SetValue(FOX_LOADED_FINGERPRINT, metadata_fingerprint);
 			    }
@@ -1023,12 +1023,12 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
 	      
 	      if (TWFunc::Path_Exists(Boot_File))
 		{
-		  gui_msg("fox_incremental_ota_res_run=Running restore process of the current OTA file");
+		  gui_msg("Kalifox_incremental_ota_res_run=Running restore process of the current OTA file");
 		  DataManager::SetValue(FOX_RUN_SURVIVAL_BACKUP, 1);
 		  PartitionManager.Set_Restore_Files(ota_location_folder);
 		  if (PartitionManager.Run_OTA_Survival_Restore(ota_location_folder))
 		    {
-		      gui_msg("fox_incremental_ota_res=Process OTA_RES -- done!!");
+		      gui_msg("Kalifox_incremental_ota_res=Process OTA_RES -- done!!");
 		    }
 		  else
 		    {
@@ -1040,7 +1040,7 @@ int Fox_Prepare_Update_Binary(const char *path, ZipArchiveHandle Zip)
 	      else
 		{
 		  set_miui_install_status(OTA_CORRUPT, false);
-		  gui_err("fox_survival_does_not_exist=OTA Survival does not exist! Please flash a full ROM first!");
+		  gui_err("Kalifox_survival_does_not_exist=OTA Survival does not exist! Please flash a full ROM first!");
 		  return INSTALL_ERROR;
 		}
 	    }
