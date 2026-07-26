@@ -457,7 +457,7 @@
 					<action function="set">tw_existpage=fox_modules_confirm</action>
 					<action function="page">filecheck</action>
 				</listitem>
-				<listitem name="OrangeFox: {@dialog_reset_theme_hdr}">
+				<listitem name="KaliFox: {@dialog_reset_theme_hdr}">
 					<condition var1="fileexists" var2="/FFiles/OF_reset/OF_reset.zip"/>
 					<icon res="archive"/>
 					<action function="page">mod_reset</action>
