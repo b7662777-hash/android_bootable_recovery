@@ -111,16 +111,13 @@
 		<image name="kb_arrow_down" filename="Default/Keyboard/kb_arrow_down" retainaspect="1"/>
 
 		<!-- Other -->
-		<image name="actionbar_show" filename="Default/Other/show" retainaspect="1"/>
+		ctionbar_show" filename="Default/Other/show" retainaspect="1"/>
 		<image name="actionbar_clear" filename="Default/Other/actionbar_clear" retainaspect="1"/>
 		<image name="empty_folder" filename="Default/FullscreenIcons/empty_folder" retainaspect="1"/>
 		<image name="fox_lock" filename="Default/FullscreenIcons/fox_lock" retainaspect="1"/>
 		<image name="empty_box" filename="Default/FullscreenIcons/box" retainaspect="1"/>
 		
 		<!-- About -->
-		<image name="author_fd" filename="Default/About/author_fd" retainaspect="1"/>
-		<image name="author_yan" filename="Default/About/author_yan" retainaspect="1"/>
-		<image name="author_jabba" filename="Default/About/author_jabba" retainaspect="1"/>
 		<image name="maintainer_img" filename="Default/About/maintainer" retainaspect="1"/>
 	</resources>
 </recovery>
