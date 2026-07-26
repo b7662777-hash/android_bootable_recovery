@@ -27,7 +27,7 @@
 		<string name="adopted_storage">Adopted Storage</string>
 
 		<!-- GUI XML strings -->
-		<string name="twrp_watch_header">OrangeFox %fox_actual_build%</string>
+		<string name="twrp_watch_header">KaliFox %fox_actual_build%</string>
 		<string name="cpu_temp">CPU: %tw_cpu_temp% &#xB0;C</string>
 		<string name="sort_by_name_asc">Name</string>
 		<string name="sort_by_date_asc">Date</string>
@@ -60,7 +60,7 @@
 		<string name="folder">Folder</string>
 		<string name="file">File</string>
 		<string name="zip_sig_chk">ZIP signature verification</string>
-		<string name="inject_twrp_chk">Inject OrangeFox after install</string>
+		<string name="inject_twrp_chk">Inject KaliFox after install</string>
 		<string name="install_reboot_chk">Reboot after installation is complete</string>
 		<string name="options_hdr">Options</string>
 		<string name="zip_queue">Queue</string>
@@ -200,11 +200,11 @@
 		<string name="swipe_power_off">Swipe to Power Off</string>
 		<string name="sys_ro">System Partition</string>
 		<string name="sys_ro_hdr">Unmodified System Partition</string>
-		<string name="sys_rop1">OrangeFox can leave your system partition</string>
+		<string name="sys_rop1">KaliFox can leave your system partition</string>
 		<string name="sys_rop2">unmodified to make it easier for you to</string>
 		<string name="sys_rop2a">take official updates.</string>
-		<string name="sys_rop3">OrangeFox will be unable to prevent the</string>
-		<string name="sys_rop4">stock ROM from replacing OrangeFox.</string>
+		<string name="sys_rop3">KaliFox will be unable to prevent the</string>
+		<string name="sys_rop4">stock ROM from replacing KaliFox.</string>
 		<string name="sys_rop5">ZIP installations or ADB operations</string>
 		<string name="sys_rop6">may still modify the system partition.</string>
 		<string name="sys_ro_never_show_chk">Never show this screen again</string>
@@ -277,10 +277,10 @@
 		<string name="copying_log">Copying Log to SD Card...</string>
 		<string name="copy_log_complete">Log copied</string>
 		<string name="terminal_btn">Terminal</string>
-		<string name="inject_twrp_btn">Inject OrangeFox</string>
-		<string name="inject_twrp_confirm">Re-Inject OrangeFox</string>
-		<string name="injecting_twrp">Re-Injecting OrangeFox...</string>
-		<string name="inject_twrp_complete">OrangeFox Injection completed</string>
+		<string name="inject_twrp_btn">Inject KaliFox</string>
+		<string name="inject_twrp_confirm">Re-Inject KaliFox</string>
+		<string name="injecting_twrp">Re-Injecting KaliFox...</string>
+		<string name="inject_twrp_complete">KaliFox Injection completed</string>
 		<string name="swipe_to_confirm">Swipe to Confirm</string>
 		<string name="part_sd_hdr">Partition SD</string>
 		<string name="rem_sd">Removable Storage</string>
@@ -506,7 +506,7 @@
 		<string name="need_new_adb">You need adb 1.0.32 or newer to sideload to this device.</string>
 		<string name="no_pwd">No password provided.</string>
 		<string name="done_ors">Done processing script file</string>
-		<string name="injecttwrp">Injecting OrangeFox into boot image...</string>
+		<string name="injecttwrp">Injecting KaliFox into boot image...</string>
 		<string name="zip_err">Error installing ZIP file '{1}'</string>
 		<string name="installing_zip">Installing ZIP file '{1}'</string>
 		<string name="select_backup_opt">Setting backup options:</string>
@@ -542,8 +542,8 @@
 		<string name="base_pkg_err">Failed to load base packages.</string>
 		<string name="simulating">SIMULATING ACTIONS</string>
 		<string name="backup_cancel">Backup Cancelled</string>
-		<string name="config_twrp">Configuring OrangeFox...</string>
-		<string name="config_twrp_err">Unable to configure OrangeFox with this kernel.</string>
+		<string name="config_twrp">Configuring KaliFox...</string>
+		<string name="config_twrp_err">Unable to configure KaliFox with this kernel.</string>
 		<string name="copy_log">Copied recovery log to {1}.</string>
 		<string name="max_queue">Maximum ZIP queue reached!</string>
 		<string name="min_queue">Minimum ZIP queue reached!</string>
@@ -560,7 +560,7 @@
 		<string name="cancel_sideload">Cancelling ADB sideload...</string>
 		<string name="change_fs_err">Error changing file system.</string>
 		<string name="change_fs_hdr">Change File System</string>
-		<string name="theme_ver_err">Custom theme version does not match OrangeFox version. Using stock theme.</string>
+		<string name="theme_ver_err">Custom theme version does not match KaliFox version. Using stock theme.</string>
 		<string name="up_a_level">..</string>
 
 		<!-- new-->
@@ -786,7 +786,7 @@
 		<string name="enable_adb">Enable ADB</string>
 		<string name="enable_fastboot">Enable Fastboot</string>
 		<string name="fastboot_console_msg">Entered Fastboot mode...</string>
-		<string name="data_media_fbe_msg">OrangeFox will not recreate /data/media on an FBE device. Please reboot into your rom to create /data/media</string>
+		<string name="data_media_fbe_msg">KaliFox will not recreate /data/media on an FBE device. Please reboot into your rom to create /data/media</string>
 
 		<!-- Console Messages -->
 		<string name="fox_incremental_ota_compatibility_chk">Verifying Incremental Package Signature...</string>
@@ -805,9 +805,9 @@
 		<string name="fox_incremental_ota_res_run">Running OTA_RES process...</string>
 		<string name="fox_incremental_ota_bak_run">Running OTA_BAK process...</string>
 		<string name="fox_incremental_ota_bak">OTA_BAK -- done!</string>
-		<string name="fox_internal_fatal_i1">OrangeFox: FATAL ERROR! You cannot backup Internal Storage onto itself!</string>
+		<string name="fox_internal_fatal_i1">KaliFox: FATAL ERROR! You cannot backup Internal Storage onto itself!</string>
 		<string name="fox_internal_fatal_i2">You MUST change the backup destination to MicroSD/USB-OTG.</string>
-		<string name="fox_internal_q1">OrangeFox - Internal Storage - take care!</string>
+		<string name="fox_internal_q1">KaliFox - Internal Storage - take care!</string>
 
 		<string name="copy_kernel_log">Copied kernel log to {1}</string>
 		<string name="copy_logcat">Copied logcat to {1}</string>
@@ -826,7 +826,7 @@
 		<string name="backups_remove_all">All backups</string>
 		<string name="backups_remove">Delete</string>
 		
-		<!-- OrangeFox Recovery - Pie Door theme -->
+		<!-- KaliFox Recovery - Pie Door theme -->
 
 		<string name="unpack">Unpack</string>
 		<string name="repack">Repack</string>
@@ -842,10 +842,10 @@
 		
 		<string name="module_install">Install</string>
 		<string name="module_uninstall">Uninstall</string>
-		<string name="remove_of_files">Remove OrangeFox files</string>
+		<string name="remove_of_files">Remove KaliFox files</string>
 		<string name="remove_factory_reset_protection">Remove FRP</string>
 		<string name="module_initd">Enable init.d support</string>
-		<string name="module_of_set">Backup OrangeFox Settings</string>
+		<string name="module_of_set">Backup KaliFox Settings</string>
 		<string name="module_cam">Enable Camera2API</string>
 		<string name="module_pass">Remove password</string>
 		<string name="module_remove_survival">Remove all survival scripts</string>
@@ -920,7 +920,7 @@
 		
 		<string name="new_pass_info_1">Enter new password to</string>
 		<string name="new_pass_info_1_gk">Draw new gesture key to protect</string>
-		<string name="new_pass_info_2">OrangeFox against unauthorized</string>
+		<string name="new_pass_info_2">KaliFox against unauthorized</string>
 		<string name="new_pass_info_3">access.</string>
 		<string name="new_pass_info_4">You need to enter your password twice.</string>
 		<string name="new_pass_info_4_gk">You need to draw gesture key twice.</string>
@@ -978,7 +978,7 @@
 		<string name="abt_front">Frontend developer</string>
 		<string name="abt_back">Backend developer</string>
 		<string name="abt_device">Device</string>
-		<string name="version_twrp">OrangeFox Version</string>
+		<string name="version_twrp">KaliFox Version</string>
 		<string name="build_type">Build type</string>
 		<string name="abt_credits">Credits</string>
 		<string name="abt_trans">Translators</string>
@@ -998,7 +998,7 @@
 		<string name="fox_build_type">[Build type]: {1}</string>
 		<string name="fox_support">[Support]   : {1}</string>
 		<string name="fox_nosupport">[Support]   : No official support for unknown builds</string>
-		<string name="fox_websites">OrangeFox websites:</string>
+		<string name="fox_websites">Official KaliFox Project</string>
 		<string name="fox_downloads">[Downloads] : {1}</string>
 		<string name="fox_faq">[Guides/FAQ]: {1}</string>
 		<string name="fox_encrypted">* Storage is encrypted</string>
@@ -1104,9 +1104,9 @@
 		<string name="install_queue_magisk_btn">Add Magisk</string>
 		<string name="hint_ffiles_missing">Have you lost something?</string>
 		<string name="hint_ffiles_missing1">Fox Addons unavailable</string>
-		<string name="hint_ffiles_missing2">OrangeFox can't access its files.</string>
+		<string name="hint_ffiles_missing2">KaliFox can't access its files.</string>
 		<string name="hint_ffiles_missing3">Try to mount /data or reinstall</string>
-		<string name="hint_ffiles_missing4">OrangeFox if /data was wiped.</string>
+		<string name="hint_ffiles_missing4">KaliFox if /data was wiped.</string>
 		<string name="hint_ffiles_missing5"><!-- Use this line if this hint is too big in your language --></string>
 		<string name="hide_btn">Hide hint</string>
 
@@ -1162,7 +1162,7 @@
 		<string name="spl_image">Background image</string>
 		<string name="spl_del_img">Remove image</string>
 		<string name="hidden">Hidden</string>
-		<string name="spl_ofr">"OrangeFox Recovery" label</string>
+		<string name="spl_ofr">"KaliFox Recovery" label</string>
 
 		<string name="batch_selected">%of_batch_count% selected</string>
 		<string name="batch_title">Batch actions</string>
@@ -1198,11 +1198,11 @@
 		<string name="fix_recovery_loop_complete">Fix Recovery Bootloop Complete</string>
 		<string name="fixing_recovery_loop_patch">Patching kernel...</string>
 		<string name="fix_recovery_loop_patch_error">Error patching kernel.</string>
-		<string name="try_app">Try our app!</string>
-		<string name="try_app_2">Check recovery updates using our</string>
-		<string name="try_app_3">new app! </string>
-		<string name="try_app_4">Download link:</string>
-		<string name="try_app_5">https://app.orangefox.tech</string>
+		<string name="try_app">KaliFox Recovery</string>
+        <string name="try_app_2">Visit our GitHub repository.</string>
+        <string name="try_app_3">Source Code</string>
+        <string name="try_app_4">Repository:</string>
+        <string name="try_app_5">https://github.com/b7662777-hash/android_bootable_recovery</string>
 		<string name="fm_edit_file">Edit File in nano</string>
 		<string name="fm_open_terminal_btn">Open Terminal Here</string>
 		<string name="batch_progress">Progress</string>
@@ -1240,12 +1240,12 @@
 		<string name="unmapping_super_devices">Unmapping Super Devices...</string>
 		<string name="unmap_super_devices_complete">Unmapped all Super Devices</string>
 
-		<string name="auto_reflashtwrp_chk">Reflash OrangeFox after flashing a ROM</string>
-		<string name="modified_ramdisk_error">ramdisk files have been modified, unable to create ramdisk to flash. fastboot boot OrangeFox and try this option again or go back to Files and install img file as Recovery Ramdisk using Install Ramdisk button.</string>
+		<string name="auto_reflashtwrp_chk">Reflash KaliFox after flashing a ROM</string>
+		<string name="modified_ramdisk_error">ramdisk files have been modified, unable to create ramdisk to flash. fastboot boot KaliFox and try this option again or go back to Files and install img file as Recovery Ramdisk using Install Ramdisk button.</string>
 		<string name="create_ramdisk_error">failed to create ramdisk to flash.</string>
-		<string name="reflash_twrp">Flash current OrangeFox</string>
-		<string name="reflashing_twrp">Flashing OrangeFox...</string>
-		<string name="reflash_twrp_complete">Done flashing OrangeFox</string>
+		<string name="reflash_twrp">Flash current KaliFox</string>
+		<string name="reflashing_twrp">Flashing KaliFox...</string>
+		<string name="reflash_twrp_complete">Done flashing KaliFox</string>
 
 		<string name="auto_disable_avb2">Disable vbmeta AVB2.0 after ROM flash</string>
 		<string name="disable_avb2">Disable vbmeta AVB2.0</string>
