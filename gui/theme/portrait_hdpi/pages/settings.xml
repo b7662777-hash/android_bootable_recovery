@@ -994,7 +994,7 @@
 			<text>
 				<font resource="about" color="%text%"/>
 				<placement x="%about_txt_x%" y="%about_logo_y%"/>
-				<text>OrangeFox Recovery</text>
+				<text>KaliFox Recovery</text>
 			</text>
 			
 			<text>
