@@ -4,124 +4,93 @@
 		<!-- Settings -->
 		<page name="settings">
 			<listbox style="group_list">
-				<placement x="0" y="%ab_h%" w="%screen_w%" h="%bl_fullscreen_h%"/>
-				<iconsize w="216" h="168" padding="24"/>
-				<listitem name="{@settings_general}">
-					<icon res="bs_btn_set_global"/>
-					<action function="set">general_back=settings</action>
-					<action function="page">ext_general</action>
-				</listitem>
-				<!-- listitem name="OTA" -->
-				<listitem name="{@fox_ota_lite}">
-					<condition var1="of_no_miui_features" op="!=" var2="1"/>
-					<condition var1="of_no_ota_menu" op="!=" var2="1"/>
-					<icon res="bs_btn_set_ota"/>
-					<action function="page">fox_ota</action>
-				</listitem>
-				<listitem name="{@fox_ota_lite}">
-					<condition var1="of_no_miui_features" var2="1"/>
-					<condition var1="of_ab_device" op="!=" var2="1"/>
-					<condition var1="of_no_ota_menu" op="!=" var2="1"/>
-					<icon res="bs_btn_set_ota"/>
-					<action function="page">fox_ota_lite</action>
-				</listitem>
-				<listitem name="{@settings_ui}">
-					<icon res="bs_btn_set_custom"/>
-					<action function="page">ext_custom_reset</action>
-				</listitem>
-				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="1"/>
-					<condition var1="tw_is_decrypted" var2="0"/>
-					<icon res="bs_btn_set_secure"/>
-					<action function="overlay">pass_error</action>
-				</listitem>
-				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="1"/>
-					<condition var1="tw_is_decrypted" var2="1"/>
-					<icon res="bs_btn_set_secure"/>
-					<action function="page">pass_select</action>
-				</listitem>
-				<listitem name="{@enter_password_cptn}">
-					<condition var1="tw_is_encrypted" var2="0"/>
-					<icon res="bs_btn_set_secure"/>
-					<action function="page">pass_select</action>
-				</listitem>
-				<listitem name="{@settings_screen}">
-					<icon res="bs_btn_set_screen"/>
-					<action function="page">ext_screen</action>
-				</listitem>
-				<listitem name="{@vibration_hdr}">
-					<icon res="bs_btn_set_vibro"/>
-					<condition var1="tw_disable_haptics" op="!=" var2="1"/>
-					<action function="page">ext_vibrate</action>
-				</listitem>
-				<listitem name="{@backup_hdr}">
-					<icon res="bs_btn_restore"/>
-					<action function="set">backup_back=settings</action>
-					<action function="page">ext_backup</action>
-				</listitem>
-				<listitem name="{@settings_time}">
-					<icon res="bs_btn_set_regional"/>
-					<action function="page">ext_time</action>
-				</listitem>
-				<listitem name="{@about_hdr}">
-					<icon res="bs_btn_set_about"/>
-					<action function="page">about</action>
-				</listitem>
-			</listbox>
-			
-			<template name="base"/>
+				<listbox style="group_list">
+    <placement x="0" y="%ab_h%" w="%screen_w%" h="%bl_fullscreen_h%"/>
+    <iconsize w="216" h="168" padding="24"/>
 
-			<text style="text_ab_title">
-				<placement x="%col1_x_indent%" y="%ab_bc_y%"/>
-				<text>{@settings_hdr}</text>
-			</text>
-			
-			<button style="actionbar">
-				<placement x="%ab_btn1_x%" y="%ab_y%" placement="4"/>
-				<action function="queueclear"/>
-				<action function="set">fox_m_author=DarthJabba9</action>
-				<action function="set">fox_m_name={@dialog_reset_theme_hdr}</action>
-				<action function="set">tw_file=OF_reset.zip</action>
-				<action function="set">tw_filename=/FFiles/OF_reset/OF_reset.zip</action>
-				<action function="set">tw_filecheck=%tw_filename%</action>
-				<action function="set">install_back=settings</action>
-				<action function="set">tw_zip_location=/FFiles/OF_reset</action>
-				<action function="queuezip"/>
-				<action function="set">tw_notexistpage=fox_modules_confirm</action>
-				<action function="set">tw_existpage=fox_modules_confirm</action>
-				<action function="page">filecheck</action>
-			</button>
+    <!-- General -->
+    <listitem name="{@settings_general}">
+        <icon res="bs_btn_set_global"/>
+        <action function="set">general_back=settings</action>
+        <action function="page">ext_general</action>
+    </listitem>
 
-			<image>
-				<placement x="%ab_btn1_x%" y="%ab_y%" placement="4"/>
-				<image resource="actionbar_reset"/>
-			</image>
+    <!-- Screen -->
+    <listitem name="{@settings_screen}">
+        <icon res="bs_btn_set_screen"/>
+        <action function="page">ext_screen</action>
+    </listitem>
 
-			<button style="actionbar">
-				<placement x="%ab_btn2_x%" y="%ab_y%" placement="4"/>
-				<condition var1="fox_lab" var2="1"/>
-				<action function="page">fox_lab</action>
-			</button>
+    <!-- Vibration -->
+    <listitem name="{@vibration_hdr}">
+        <icon res="bs_btn_set_vibro"/>
+        <condition var1="tw_disable_haptics" op="!=" var2="1"/>
+        <action function="page">ext_vibrate</action>
+    </listitem>
 
-			<image>
-				<placement x="%ab_btn2_x%" y="%ab_y%" placement="4"/>
-				<condition var1="fox_lab" var2="1"/>
-				<image resource="actionbar_settings"/>
-			</image>
+    <!-- Password -->
+    <listitem name="{@enter_password_cptn}">
+        <condition var1="tw_is_encrypted" var2="1"/>
+        <condition var1="tw_is_decrypted" var2="0"/>
+        <icon res="bs_btn_set_secure"/>
+        <action function="overlay">pass_error</action>
+    </listitem>
 
-			<template name="gestures"/>
+    <listitem name="{@enter_password_cptn}">
+        <condition var1="tw_is_encrypted" var2="1"/>
+        <condition var1="tw_is_decrypted" var2="1"/>
+        <icon res="bs_btn_set_secure"/>
+        <action function="page">pass_select</action>
+    </listitem>
 
-			<action>
-				<touch key="home"/>
-				<action function="page">main</action>
-			</action>
+    <listitem name="{@enter_password_cptn}">
+        <condition var1="tw_is_encrypted" var2="0"/>
+        <icon res="bs_btn_set_secure"/>
+        <action function="page">pass_select</action>
+    </listitem>
 
-			<action>
-				<touch key="back"/>
-				<action function="page">advanced</action>
-			</action>
-		</page>
+    <!-- Backup -->
+    <listitem name="{@backup_hdr}">
+        <icon res="bs_btn_restore"/>
+        <action function="set">backup_back=settings</action>
+        <action function="page">ext_backup</action>
+    </listitem>
+
+    <!-- Time -->
+    <listitem name="{@settings_time}">
+        <icon res="bs_btn_set_regional"/>
+        <action function="page">ext_time</action>
+    </listitem>
+
+    <!-- UI -->
+    <listitem name="{@settings_ui}">
+        <icon res="bs_btn_set_custom"/>
+        <action function="page">ext_custom_reset</action>
+    </listitem>
+
+    <!-- OTA -->
+    <listitem name="{@fox_ota_lite}">
+        <condition var1="of_no_miui_features" op="!=" var2="1"/>
+        <condition var1="of_no_ota_menu" op="!=" var2="1"/>
+        <icon res="bs_btn_set_ota"/>
+        <action function="page">fox_ota</action>
+    </listitem>
+
+    <listitem name="{@fox_ota_lite}">
+        <condition var1="of_no_miui_features" var2="1"/>
+        <condition var1="of_ab_device" op="!=" var2="1"/>
+        <condition var1="of_no_ota_menu" op="!=" var2="1"/>
+        <icon res="bs_btn_set_ota"/>
+        <action function="page">fox_ota_lite</action>
+    </listitem>
+
+    <!-- About -->
+    <listitem name="{@about_hdr}">
+        <icon res="bs_btn_set_about"/>
+        <action function="page">about</action>
+    </listitem>
+
+</listbox>
 
 		<!-- settings for Wipe, FormatData, Mount and Terminal -->
 		<page name="ext_context">
